@@ -1,0 +1,20 @@
+@import "../../node_modules/bulma/bulma.sass";
+
+@import "./base/reset";
+
+@import "./config/typography";
+@import "./config/variables";
+@import "./config/mixins";
+@import "./config/functions";
+
+@import "./globals/header";
+@import "./globals/menu";
+@import "./globals/footer";
+@import "./globals/layout";
+
+@import "./components/media-modal";
+@import "./components/search-modal";
+
+@import "./templates/home";
+@import "./templates/randonnee";
+@import "./templates/galerie";

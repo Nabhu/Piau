@@ -1,0 +1,21 @@
+#is-search-modal {
+  .panel {
+    background: $white;
+    .panel-tabs {
+      padding: 0.75em 1em;
+    }
+    .panel-block {
+      display: none;
+      &.is-visible {
+        display: flex;
+      }
+    }
+    .panel-tabs:not(:last-child),
+    .panel-block:not(:last-child) {
+      border-bottom: none;
+    }
+    .panel-block.is-visible:not(:first-child) {
+      border-top: 1px solid #ededed;
+    }
+  }
+}

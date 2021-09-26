@@ -1,0 +1,23 @@
+.template-galerie {
+  progress {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 3.25rem;
+    @media screen and (min-width: 1024px) {
+      top: 5.25rem;
+    }
+  }
+  .is-gallery-container {
+    .card-image {
+      height: 450px;
+      img,
+      video {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+#is-media-modal {
+  p {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img,
+    video {
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}

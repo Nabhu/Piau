@@ -1,0 +1,32 @@
+nav.navbar {
+  .is-player {
+    .is-pause {
+      display: none;
+    }
+    .is-play {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &.is-playing {
+      .is-pause {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .is-play {
+        display: none;
+      }
+    }
+    * {
+      pointer-events: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-end {
+    position: absolute;
+    top: 0;
+  }
+}

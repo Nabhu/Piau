@@ -1,0 +1,71 @@
+.template-home {
+  .header {
+    @media screen and (min-width: 769px), print {
+      height: calc(100vh - 3.25rem);
+    }
+    overflow: hidden;
+    .hero-body {
+      height: 100%;
+    }
+    .left {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform $hover_duration $hover_cubic,
+          box-shadow $hover_duration $hover_cubic;
+        &:hover,
+        &:focus,
+        &:visited {
+          transform: translateY(20px);
+          box-shadow: $hover_shadow;
+        }
+        .title,
+        p {
+          color: $text;
+        }
+        .card-footer {
+          padding: 1.5rem;
+          .level {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            @media screen and (max-width: 768px) {
+              .level-item {
+                margin: 0 0.75rem;
+              }
+            }
+          }
+          .title {
+            font-size: 1.2rem;
+            span {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      animation: diagonalSroll 20s infinite alternate-reverse linear;
+      pointer-events: none;
+      display: none;
+      @media screen and (min-width: 769px), print {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes diagonalSroll {
+  from {
+    transform: rotate(25deg) translateY(-30%);
+  }
+  to {
+    transform: rotate(25deg) translateY(30%);
+  }
+}
