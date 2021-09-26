@@ -58,7 +58,13 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router
+      basename={
+        !process.env.NODE_ENV || process.env.NODE_ENV === "development"
+          ? ""
+          : "/Piau"
+      }
+    >
       <ScrollTop>
         <div>
           <nav
